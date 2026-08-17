@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore upcoming events, workshops, and hackathons hosted by the AI & Innovation Club.">
+    <title>Events - AI & Innovation Club</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('./images/bg1.jpg');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        img {
+            object-fit: cover;
+        }
+
+        .card {
+            transition: .3s;
+            background: linear-gradient(90deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+            color: #ffffff;
+            border-radius: 12px;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 .8rem 1.5rem rgba(255, 123, 0, .5);
+        }
+
+        .custom-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bookmark-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 10;
+
+            width: 32px;
+            height: 32px;
+            padding: 0;
+
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 193, 7, 0.6);
+            color: #ffc107;
+            border-radius: 50px;
+
+            cursor: pointer;
+            white-space: nowrap;
+
+            transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                background-color 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .bookmark-badge .btn-text {
+            max-width: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.3s ease,
+                margin-left 0.3s ease;
+            margin-left: 0;
+        }
+
+        .bookmark-badge:hover {
+            width: 180px;
+            padding: 0 12px;
+            justify-content: flex-start;
+            background-color: #ffc107;
+            color: #000;
+            box-shadow: 0 0 12px rgba(255, 193, 7, 0.8);
+        }
+
+        .bookmark-badge:hover .btn-text {
+            max-width: 150px;
+            opacity: 1;
+            margin-left: 6px;
+        }
+
+        .bookmark-badge.bookmarked {
+            background-color: #ffc107;
+            color: #000;
+            border-color: #ffc107;
+            box-shadow: 0 0 8px rgba(255, 193, 7, .5);
+        }
+
+        .bookmark-badge .star-icon {
+            display: inline-block;
+            margin-left: 4px;
+            font-size: 22px;
+            line-height: 1.45;
+        }
+
+        .hero-section {
+            background-color: #111827;
+        }
+
+        .poster-image {
+            height: 320px;
+            width: 100%;
+        }
+
+        .poster-footer {
+            padding: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                AI & Innovation Club
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">
+                            AI Projects
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="workshops.html">
+                            Workshops
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="events.html">
+                            Events
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="innovation.html">
+                            Innovation Challenges
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">
+                            News & Resources
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            Contact / Join Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section text-white py-5">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">
+                Events
+            </h1>
+
+            <p class="lead">
+                Connect, Learn, and Innovate with Us.
+            </p>
+        </div>
+    </section>
+
+    <!-- Poster -->
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <!-- Poster 1-->
+            <div class="col">
+                <div class="card custom-card">
+                    <button type="button" class="btn bookmark-badge" id="bookmarkBtn-1" onclick="toggleBookmark('1')">
+                        <span class="star-icon">★</span>
+                        <span class="btn-text" id="btnText-1">Bookmark Event</span>
+                    </button>
+                    <img src="./images/poster1.jpg" alt="AI Innovation Club Event Poster" class="poster-image">
+                    <div class="poster-footer text-center">
+                        <h5>AI Innovation Summit</h5>
+                        <p>Keynote, Business Panel & 24H Hackathon</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Poster 2-->
+            <div class="col">
+                <div class="card custom-card">
+                    <button type="button" class="btn bookmark-badge" id="bookmarkBtn-2" onclick="toggleBookmark('2')">
+                        <span class="star-icon">★</span>
+                        <span class="btn-text" id="btnText-2">Bookmark Event</span>
+                    </button>
+                    <img src="./images/poster2.jpg" alt="AI Innovation Club Event Poster" class="poster-image">
+                    <div class="poster-footer text-center">
+                        <h5>Future of AI Summit</h5>
+                        <p>Conference, Workshop & Networking.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Poster 3-->
+            <div class="col">
+                <div class="card custom-card">
+                    <button type="button" class="btn bookmark-badge" id="bookmarkBtn-3" onclick="toggleBookmark('3')">
+                        <span class="star-icon">★</span>
+                        <span class="btn-text" id="btnText-3">Bookmark Event</span>
+                    </button>
+                    <img src="./images/poster3.jpg" alt="AI Innovation Club Event Poster" class="poster-image">
+                    <div class="poster-footer text-center">
+                        <h5>Monthly Tech Workshops</h5>
+                        <p>Prompt Engineering & Hackathons.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Poster 4-->
+            <div class="col">
+                <div class="card custom-card">
+                    <button type="button" class="btn bookmark-badge" id="bookmarkBtn-4" onclick="toggleBookmark('4')">
+                        <span class="star-icon">★</span>
+                        <span class="btn-text" id="btnText-4">Bookmark Event</span>
+                    </button>
+                    <img src="./images/poster4.jpg" alt="AI Innovation Club Event Poster" class="poster-image">
+                    <div class="poster-footer text-center">
+                        <h5>Summer AI Workshop</h5>
+                        <p>Learn by Building: Computer Vision & Tools.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Poster 5-->
+            <div class="col">
+                <div class="card custom-card">
+                    <button type="button" class="btn bookmark-badge" id="bookmarkBtn-5" onclick="toggleBookmark('5')">
+                        <span class="star-icon">★</span>
+                        <span class="btn-text" id="btnText-5">Bookmark Event</span>
+                    </button>
+                    <img src="./images/poster5.jpg" alt="AI Innovation Club Event Poster" class="poster-image">
+                    <div class="poster-footer text-center">
+                        <h5>Emerging Tech Night</h5>
+                        <p>Generative AI, Robotics & Data Ethics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            for (let i = 1; i <= 5; i++) {
+                checkBookmarkState(i.toString());
+            }
+        });
+
+        function toggleBookmark(eventId) {
+            const storageKey = "isEventBookmarked_" + eventId;
+            const isCurrentlyBookmarked = sessionStorage.getItem(storageKey) === "true";
+            sessionStorage.setItem(storageKey, !isCurrentlyBookmarked);
+            setBookmarkedState(eventId, !isCurrentlyBookmarked);
+        }
+
+        function checkBookmarkState(eventId) {
+            const storageKey = "isEventBookmarked_" + eventId;
+            const isBookmarked = sessionStorage.getItem(storageKey) === "true";
+            setBookmarkedState(eventId, isBookmarked);
+        }
+
+        function setBookmarkedState(eventId, isBookmarked) {
+            const btn = document.getElementById("bookmarkBtn-" + eventId);
+            const btnText = document.getElementById("btnText-" + eventId);
+
+            if (!btn || !btnText) return;
+
+            if (isBookmarked) {
+                btn.classList.add("bookmarked");
+                btnText.innerText = "Bookmarked!";
+            } else {
+                btn.classList.remove("bookmarked");
+                btnText.innerText = "Bookmark Event";
+            }
+        }
+    </script>
+
+    <!-- footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p class="mb-1">
+                © 2026 AI & Innovation Club. All Rights Reserved.
+            </p>
+
+            <small>
+                Universiti Student Community | Artificial Intelligence & Innovation
+            </small>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

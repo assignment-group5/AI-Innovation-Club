@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI & Machine Learning Student Projects - AI & Innovation Club">
+    <title>AI Projects - AI & Innovation Club</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(rgba(10, 15, 30, .55), rgba(10, 15, 30, .55)), url('./images/bg3.jpg');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .card {
+            transition: transform .3s ease, box-shadow .3s ease;
+            background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+            color: #ffffff;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, .4);
+            border-color: rgba(13, 110, 253, 0.4);
+        }
+        .hero-section { background-color: #0a0f2e; }
+        .tech-badge {
+            background-color: rgba(13, 110, 253, 0.15);
+            border: 1px solid rgba(13, 110, 253, 0.4);
+            color: #6ea8fe;
+            font-size: 0.75rem;
+        }
+        .modal-content {
+            background: #0f172a;
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">AI & Innovation Club</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="projects.html">AI Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="workshops.html">Workshops</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="innovation.html">Innovation Challenges</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">News & Resources</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact / Join Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-white py-5 text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">AI & Machine Learning Projects</h1>
+            <p class="lead text-white-50">Discover student-built neural networks, computer vision tools, and intelligent software applications.</p>
+        </div>
+    </section>
+
+    <!-- Control Toolbar (Search & Filters) -->
+    <div class="container my-4">
+        <div class="row g-3 align-items-center bg-dark p-3 rounded-3 text-white">
+            <div class="col-md-5">
+                <div class="input-group">
+                    <span class="input-group-text bg-secondary border-0 text-white"><i class="bi bi-search"></i></span>
+                    <input type="text" id="searchInput" class="form-control bg-secondary text-white border-0" placeholder="Search projects by title or keyword...">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="btn-group w-100" role="group">
+                    <button type="button" class="btn btn-outline-light active filter-btn" data-filter="all">All</button>
+                    <button type="button" class="btn btn-outline-light filter-btn" data-filter="nlp">NLP</button>
+                    <button type="button" class="btn btn-outline-light filter-btn" data-filter="cv">Vision</button>
+                    <button type="button" class="btn btn-outline-light filter-btn" data-filter="ml">ML</button>
+                </div>
+            </div>
+            <div class="col-md-3 text-end">
+                <span class="badge bg-warning text-dark fs-6 py-2 px-3">
+                    <i class="bi bi-bookmark-fill me-1"></i> Saved: <span id="bookmarkCounter">0</span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="container mb-5">
+        <div class="row g-4" id="projectContainer">
+
+            <!-- Card 1 -->
+            <div class="col-md-6 col-lg-4 project-item" data-category="nlp" data-title="smart campus assistant llm chatbot">
+                <div class="card p-4 h-100 d-flex flex-column">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <span class="badge bg-primary">NLP</span>
+                        <button class="btn btn-outline-warning btn-sm bookmark-toggle" data-id="p1">
+                            <i class="bi bi-bookmark"></i>
+                        </button>
+                    </div>
+                    <h4 class="fw-bold text-white mb-2">Smart Campus Assistant</h4>
+                    <p class="text-white-50 flex-grow-1">LLM query bot trained on university knowledge bases to give instant answers on schedules and facilities.</p>
+                    <div class="mb-3">
+                        <span class="badge tech-badge">Python</span>
+                        <span class="badge tech-badge">LangChain</span>
+                        <span class="badge tech-badge">FastAPI</span>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-outline-info btn-sm flex-grow-1 view-detail" data-title="Smart Campus Assistant" data-desc="This project leverages Retrieval-Augmented Generation (RAG) using LangChain and a ChromaDB vector index to query official university handbooks." data-tech="Python, LangChain, OpenAI API, FastAPI, Docker">View Details</button>
+                        <a href="contact.html" class="btn btn-primary btn-sm"><i class="bi bi-person-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-6 col-lg-4 project-item" data-category="cv" data-title="vision guard lab safety open cv yolo">
+                <div class="card p-4 h-100 d-flex flex-column">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <span class="badge bg-success">Computer Vision</span>
+                        <button class="btn btn-outline-warning btn-sm bookmark-toggle" data-id="p2">
+                            <i class="bi bi-bookmark"></i>
+                        </button>
+                    </div>
+                    <h4 class="fw-bold text-white mb-2">Vision Guard Safety</h4>
+                    <p class="text-white-50 flex-grow-1">Real-time object detection model monitoring engineering labs to ensure students wear safety gear.</p>
+                    <div class="mb-3">
+                        <span class="badge tech-badge">YOLOv8</span>
+                        <span class="badge tech-badge">OpenCV</span>
+                        <span class="badge tech-badge">PyTorch</span>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-outline-info btn-sm flex-grow-1 view-detail" data-title="Vision Guard Safety" data-desc="Trained on custom annotated dataset of 5,000 lab safety images to detect goggles, lab coats, and gloves with 94% accuracy." data-tech="YOLOv8, OpenCV, PyTorch, Flask">View Details</button>
+                        <a href="contact.html" class="btn btn-primary btn-sm"><i class="bi bi-person-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-6 col-lg-4 project-item" data-category="ml" data-title="academic grade predictor forecast model">
+                <div class="card p-4 h-100 d-flex flex-column">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <span class="badge bg-warning text-dark">Data Science</span>
+                        <button class="btn btn-outline-warning btn-sm bookmark-toggle" data-id="p3">
+                            <i class="bi bi-bookmark"></i>
+                        </button>
+                    </div>
+                    <h4 class="fw-bold text-white mb-2">Academic Grade Predictor</h4>
+                    <p class="text-white-50 flex-grow-1">Regression algorithm predicting course trajectory and offering personalized study plan feedback.</p>
+                    <div class="mb-3">
+                        <span class="badge tech-badge">Scikit-Learn</span>
+                        <span class="badge tech-badge">Pandas</span>
+                        <span class="badge tech-badge">Streamlit</span>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-outline-info btn-sm flex-grow-1 view-detail" data-title="Academic Grade Predictor" data-desc="Evaluates student attendance, quiz trends, and study hours using Random Forest Regression to predict final grades." data-tech="Python, Scikit-Learn, Pandas, Streamlit">View Details</button>
+                        <a href="contact.html" class="btn btn-primary btn-sm"><i class="bi bi-person-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-md-6 col-lg-4 project-item" data-category="nlp" data-title="automated code reviewer inline feedback">
+                <div class="card p-4 h-100 d-flex flex-column">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <span class="badge bg-primary">NLP</span>
+                        <button class="btn btn-outline-warning btn-sm bookmark-toggle" data-id="p4">
+                            <i class="bi bi-bookmark"></i>
+                        </button>
+                    </div>
+                    <h4 class="fw-bold text-white mb-2">Auto Code Reviewer</h4>
+                    <p class="text-white-50 flex-grow-1">Static analysis tool combined with AI LLMs to scan student repositories for security and style fixes.</p>
+                    <div class="mb-3">
+                        <span class="badge tech-badge">AST</span>
+                        <span class="badge tech-badge">Ollama</span>
+                        <span class="badge tech-badge">Node.js</span>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-outline-info btn-sm flex-grow-1 view-detail" data-title="Auto Code Reviewer" data-desc="Integrates with Git webhooks to automatically comment refactoring tips on pull requests." data-tech="Node.js, Express, Ollama API, GitHub Actions">View Details</button>
+                        <a href="contact.html" class="btn btn-primary btn-sm"><i class="bi bi-person-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col-md-6 col-lg-4 project-item" data-category="cv" data-title="autonomous drone navigation indoor obstacle">
+                <div class="card p-4 h-100 d-flex flex-column">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <span class="badge bg-success">Robotics & CV</span>
+                        <button class="btn btn-outline-warning btn-sm bookmark-toggle" data-id="p5">
+                            <i class="bi bi-bookmark"></i>
+                        </button>
+                    </div>
+                    <h4 class="fw-bold text-white mb-2">Indoor Drone Nav</h4>
+                    <p class="text-white-50 flex-grow-1">Monocular vision navigation system allowing micro-drones to map indoor corridors without GPS.</p>
+                    <div class="mb-3">
+                        <span class="badge tech-badge">ROS2</span>
+                        <span class="badge tech-badge">SLAM</span>
+                        <span class="badge tech-badge">C++</span>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-outline-info btn-sm flex-grow-1 view-detail" data-title="Indoor Drone Nav" data-desc="Uses Visual SLAM algorithm to map corridor spaces and navigate obstacles autonomously." data-tech="C++, ROS2, ORB-SLAM3, Raspberry Pi 4">View Details</button>
+                        <a href="contact.html" class="btn btn-primary btn-sm"><i class="bi bi-person-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col-md-6 col-lg-4 project-item" data-category="ml" data-title="energy consumption optimizer smart campus">
+                <div class="card p-4 h-100 d-flex flex-column">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <span class="badge bg-warning text-dark">Data Science</span>
+                        <button class="btn btn-outline-warning btn-sm bookmark-toggle" data-id="p6">
+                            <i class="bi bi-bookmark"></i>
+                        </button>
+                    </div>
+                    <h4 class="fw-bold text-white mb-2">Smart Energy Optimizer</h4>
+                    <p class="text-white-50 flex-grow-1">IoT time-series forecasting engine optimizing HVAC schedules across university lecture halls.</p>
+                    <div class="mb-3">
+                        <span class="badge tech-badge">Prophet</span>
+                        <span class="badge tech-badge">MQTT</span>
+                        <span class="badge tech-badge">Grafana</span>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-outline-info btn-sm flex-grow-1 view-detail" data-title="Smart Energy Optimizer" data-desc="Analyzes temperature sensor logs to reduce campus electricity usage during off-peak hours." data-tech="Python, Meta Prophet, MQTT Broker, Grafana">View Details</button>
+                        <a href="contact.html" class="btn btn-primary btn-sm"><i class="bi bi-person-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Project Detail Modal -->
+    <div class="modal fade" id="projectModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title fw-bold" id="modalTitle">Project Title</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Overview</h6>
+                    <p class="text-white-50" id="modalDesc">Description</p>
+                    <h6>Technologies Used</h6>
+                    <p class="text-info" id="modalTech">Tech stack</p>
+                </div>
+                <div class="modal-footer border-secondary">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+                    <a href="contact.html" class="btn btn-warning btn-sm">Join Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p class="mb-1">© 2026 AI & Innovation Club. All Rights Reserved.</p>
+            <small>Universiti Student Community | Artificial Intelligence & Innovation</small>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Local Storage Script -->
+    <script>
+        $(document).ready(function () {
+            const STORAGE_KEY = "ai_club_member2_projects";
+
+            // Local storage functions
+            function getSaved() {
+                const data = localStorage.getItem(STORAGE_KEY);
+                return data ? JSON.parse(data) : [];
+            }
+
+            function saveItems(arr) {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(arr));
+            }
+
+            function syncUI() {
+                const saved = getSaved();
+                $("#bookmarkCounter").text(saved.length);
+
+                $(".bookmark-toggle").each(function () {
+                    const id = $(this).data("id");
+                    if (saved.includes(id)) {
+                        $(this).removeClass("btn-outline-warning").addClass("btn-warning text-dark");
+                        $(this).html('<i class="bi bi-bookmark-fill"></i>');
+                    } else {
+                        $(this).removeClass("btn-warning text-dark").addClass("btn-outline-warning");
+                        $(this).html('<i class="bi bi-bookmark"></i>');
+                    }
+                });
+            }
+
+            // Bookmark Toggle
+            $(".bookmark-toggle").on("click", function () {
+                const id = $(this).data("id");
+                let list = getSaved();
+
+                if (list.includes(id)) {
+                    list = list.filter(item => item !== id);
+                } else {
+                    list.push(id);
+                }
+
+                saveItems(list);
+                syncUI();
+            });
+
+            // Filtering
+            $(".filter-btn").on("click", function () {
+                $(".filter-btn").removeClass("active");
+                $(this).addClass("active");
+                const filter = $(this).data("filter");
+
+                $(".project-item").each(function () {
+                    if (filter === "all" || $(this).data("category") === filter) {
+                        $(this).fadeIn();
+                    } else {
+                        $(this).fadeOut();
+                    }
+                });
+            });
+
+            // Live Search
+            $("#searchInput").on("keyup", function () {
+                const val = $(this).val().toLowerCase();
+                $(".project-item").each(function () {
+                    const title = $(this).data("title").toLowerCase();
+                    $(this).toggle(title.indexOf(val) > -1);
+                });
+            });
+
+            // View Details Modal
+            $(".view-detail").on("click", function () {
+                $("#modalTitle").text($(this).data("title"));
+                $("#modalDesc").text($(this).data("desc"));
+                $("#modalTech").text($(this).data("tech"));
+                const modal = new bootstrap.Modal(document.getElementById('projectModal'));
+                modal.show();
+            });
+
+            syncUI();
+        });
+    </script>
+</body>
+</html>

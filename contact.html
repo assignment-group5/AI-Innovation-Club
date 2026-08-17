@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Get in touch with the AI & Innovation Club, join as a member and follow us on social media.">
+    <title>Contact / Join Us - AI & Innovation Club</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background:
+                linear-gradient(rgba(10, 15, 30, .45), rgba(10, 15, 30, .45)),
+                url('./images/bg4.jpg');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        img {
+            object-fit: cover;
+        }
+
+        .card {
+            transition: .3s;
+            background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+            color: #ffffff;
+            border-radius: 12px;
+            border: none;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 .8rem 1.5rem rgba(0, 0, 0, .25);
+        }
+
+        .hero-section {
+            background-color: #0a0f2e;
+        }
+
+        /* Social Media Plugin */
+        .social-follow a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.4rem;
+            color: white;
+            margin: 6px;
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+
+        .social-follow a:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .25);
+            color: white;
+        }
+
+        .bg-facebook { background: #1877f2; }
+        .bg-instagram { background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); }
+        .bg-x { background: #000000; }
+        .bg-linkedin { background: #0a66c2; }
+        .bg-youtube { background: #ff0000; }
+        .bg-whatsapp { background: #25d366; }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                AI & Innovation Club
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">
+                            AI Projects
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="workshops.html">
+                            Workshops
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">
+                            Events
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="innovation.html">
+                            Innovation Challenges
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">
+                            News & Resources
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">
+                            Contact / Join Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section text-white py-5">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">
+                Contact / Join Us
+            </h1>
+
+            <p class="lead">
+                Say hello, ask a question or become a member — we'd love to have you.
+            </p>
+        </div>
+    </section>
+
+    <div class="container my-5">
+        <div class="row g-4">
+
+            <!-- Contact Form -->
+            <div class="col-md-6">
+                <div class="card p-4 h-100">
+                    <h4 class="mb-3"> Send Us a Message</h4>
+
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="contactName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="contactName" placeholder="Your name" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="contactEmail" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="contactEmail" placeholder="you@university.edu"
+                                required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="contactMessage" class="form-label">Message</label>
+                            <textarea class="form-control" id="contactMessage" rows="4" placeholder="How can we help?"
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-warning fw-bold">
+                            Send Message
+                        </button>
+                    </form>
+
+                    <small id="contactStatus" class="text-success mt-3 d-block"></small>
+                </div>
+            </div>
+
+            <!-- Join Form -->
+            <div class="col-md-6">
+                <div class="card p-4 h-100">
+                    <h4 class="mb-3"> Join the Club</h4>
+
+                    <form id="joinForm">
+                        <div class="mb-3">
+                            <label for="joinName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="joinName" placeholder="Your name" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="joinProgram" class="form-label">Program / Major</label>
+                            <input type="text" class="form-control" id="joinProgram" placeholder="e.g. Computer Science"
+                                required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="joinInterest" class="form-label">Area of Interest</label>
+                            <select class="form-select" id="joinInterest">
+                                <option>Machine Learning</option>
+                                <option>Data Science</option>
+                                <option>Robotics</option>
+                                <option>Generative AI</option>
+                                <option>Just Curious!</option>
+                            </select>
+                        </div>
+
+                        <button type="button" class="btn btn-outline-light me-2" id="saveDraftBtn">
+                            Save Draft
+                        </button>
+
+                        <button type="submit" class="btn btn-success fw-bold">
+                            Submit Application
+                        </button>
+                    </form>
+
+                    <small id="joinStatus" class="text-success mt-3 d-block"></small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social Media Plugin: Follow -->
+
+    <section class="py-5" style="background-color: rgba(10, 15, 30, .55);">
+
+        <div class="container text-center">
+
+            <h2 class="text-white fw-bold mb-2">
+                Connect With Us
+            </h2>
+
+            <p class="text-white mb-4">
+                Follow the AI & Innovation Club on social media.
+            </p>
+
+            <div class="social-follow mb-5" id="socialFollowWidget"></div>
+
+        </div>
+
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p class="mb-1">
+                © 2026 AI & Innovation Club. All Rights Reserved.
+            </p>
+
+            <small>
+                Universiti Student Community | Artificial Intelligence & Innovation
+            </small>
+        </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        (function ($) {
+
+            $.fn.socialFollow = function (platforms) {
+
+                return this.each(function () {
+                    const $widget = $(this);
+
+                    $.each(platforms, function (i, p) {
+                        const $link = $("<a>", {
+                            href: p.url,
+                            target: "_blank",
+                            rel: "noopener",
+                            class: "bg-" + p.key,
+                            title: p.label,
+                            "aria-label": p.label
+                        }).append(
+                            $("<i>", { class: "bi bi-" + p.icon })
+                        );
+
+                        // hover lift is handled by CSS, but the plugin also
+                        // exposes a click hook other scripts could tap into
+                        $link.on("click", function () {
+                            $widget.trigger("socialFollow:click", [p.key]);
+                        });
+
+                        $widget.append($link);
+                    });
+                });
+            };
+
+        })(jQuery);
+    </script>
+
+    <script>
+        $(function () {
+
+            // ---- Social Media Plugin ----
+            $("#socialFollowWidget").socialFollow([
+                { key: "facebook",  icon: "facebook",    label: "Facebook",            url: "https://facebook.com" },
+                { key: "instagram", icon: "instagram",   label: "Instagram",           url: "https://instagram.com" },
+                { key: "x",         icon: "twitter-x",   label: "X (Twitter)",         url: "https://x.com" },
+                { key: "linkedin",  icon: "linkedin",    label: "LinkedIn",            url: "https://linkedin.com" },
+                { key: "youtube",   icon: "youtube",     label: "YouTube",             url: "https://youtube.com" },
+                { key: "whatsapp",  icon: "whatsapp",    label: "WhatsApp Community",  url: "https://whatsapp.com" }
+            ]).on("socialFollow:click", function (e, platformKey) {
+                console.log("Followed via:", platformKey);
+            });
+
+            // ---- Contact form ----
+            $("#contactForm").on("submit", function (e) {
+                e.preventDefault();
+
+                const name = $("#contactName").val();
+                sessionStorage.setItem("lastContactName", name);
+
+                $("#contactStatus").text(
+                    "Thanks, " + name + "! Your message has been noted — we'll get back to you soon."
+                );
+
+                this.reset();
+            });
+
+            // ---- Join form ----
+            $("#joinForm").on("submit", function (e) {
+                e.preventDefault();
+
+                const name = $("#joinName").val();
+                sessionStorage.removeItem("joinDraft");
+
+                $("#joinStatus").text(
+                    "Welcome aboard, " + name + "! Your application has been submitted."
+                );
+
+                this.reset();
+            });
+
+            // ---- Save Draft (sessionStorage) ----
+            $("#saveDraftBtn").on("click", function () {
+                const draft = {
+                    name: $("#joinName").val(),
+                    program: $("#joinProgram").val(),
+                    interest: $("#joinInterest").val()
+                };
+
+                sessionStorage.setItem("joinDraft", JSON.stringify(draft));
+                $("#joinStatus").text("Draft saved to Session Storage!");
+            });
+
+            // ---- Restore draft on load ----
+            const saved = sessionStorage.getItem("joinDraft");
+            if (saved) {
+                const draft = JSON.parse(saved);
+                $("#joinName").val(draft.name || "");
+                $("#joinProgram").val(draft.program || "");
+                if (draft.interest) {
+                    $("#joinInterest").val(draft.interest);
+                }
+            }
+
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

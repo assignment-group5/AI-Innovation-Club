@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore upcoming events, workshops, and hackathons hosted by the AI & Innovation Club.">
+    <title>Innovation - AI & Innovation Club</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image:url('./images/bg2.jpg');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        img {
+            object-fit: cover;
+        }
+
+        .card {
+            transition: .3s;
+            background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+            color: #ffffff;
+            border-radius: 12px;
+
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 .8rem 1.5rem rgba(0, 0, 0, .15);
+        }
+
+        .hero-section {
+            background-color: #0a0f2e;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                AI & Innovation Club
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">
+                            AI Projects
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="workshops.html">
+                            Workshops
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">
+                            Events
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="innovation.html">
+                            Innovation Challenges
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">
+                            News & Resources
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            Contact / Join Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section text-white py-5">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">
+                Innovation Challenges
+            </h1>
+
+            <p class="lead">
+                Deploy AI against reality, iterate fast, and turn insight into action.
+            </p>
+        </div>
+    </section>
+
+    <div class="container my-5">
+        <div class="row">
+            <!-- challenge -->
+            <div class="col-md-7">
+                <!--challenge1-->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">AI for Sustainability Hackathon 2026</h5>
+                        <p class="card-text">Build AI models to help solve real-world environmental and energy problems.</p>
+                        <button class="btn btn-outline-success"
+                            onclick="selectChallenge('AI for Sustainability Hackathon')">Select Challenge
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Future of AI Summit</h5>
+                        <p class="card-text">Conference, Workshop & Networking.</p>
+                        <button class="btn btn-outline-success"
+                            onclick="selectChallenge('Future of AI Summit')">Select Challenge
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Monthly Tech Workshops</h5>
+                        <p class="card-text">Prompt Engineering & Hackathons.</p>
+                        <button class="btn btn-outline-success"
+                            onclick="selectChallenge('Monthly Tech Workshops')">Select Challenge
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Summer AI Workshop</h5>
+                        <p class="card-text">Learn by Building: Computer Vision & Tools.</p>
+                        <button class="btn btn-outline-success"
+                            onclick="selectChallenge('Summer AI Workshop')">Select Challenge</button>
+                    </div>
+                </div>
+
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Emerging Tech Night</h5>
+                        <p class="card-text">Generative AI, Robotics & Data Ethics.</p>
+                        <button class="btn btn-outline-success"
+                            onclick="selectChallenge('Emerging Tech Night')">Select Challenge
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">AI Innovation Summit</h5>
+                        <p class="card-text">Keynote, Business Panel & 24H Hackathon</p>
+                        <button class="btn btn-outline-success"
+                            onclick="selectChallenge('AI Innovation Summit')">Select Challenge
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- draft -->
+            <div class="col-md-5">
+                <div class="card p-3 border-secondary">
+                    <h4>Challenge Registration Form</h4>
+                    <form id="challengeForm">
+                        <div class="mb-3">
+                            <label for="selectedChallengeInput" class="form-label">Chosen Challenge:</label>
+                            <input type="text" id="selectedChallengeInput" class="form-control" readonly
+                                placeholder="Click a challenge to select">
+                        </div>
+                        <div class="mb-3">
+                            <label for="teamName" class="form-label">Team Name:</label>
+                            <input type="text" id="teamName" class="form-control" placeholder="Enter your team name">
+                        </div>
+                        <button 
+                            type="button" class="btn btn-secondary" onclick="saveDraft()">Save Form Draft
+                        </button>
+                    </form>
+                    <small id="draftStatus" class="text-white mt-2 d-block"></small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function selectChallenge(challengeName) {
+            document.getElementById('selectedChallengeInput').value = challengeName;
+            // store to Session Storage
+            sessionStorage.setItem('currentChallenge', challengeName);
+        }
+
+        function saveDraft() {
+            const team = document.getElementById('teamName').value;
+            // store team name
+            sessionStorage.setItem('draftTeamName', team);
+
+            document.getElementById('draftStatus').textContent = "Draft saved to Session Storage!";
+        }
+
+        window.onload = function () {
+            const savedChallenge = sessionStorage.getItem('currentChallenge');
+            const savedTeam = sessionStorage.getItem('draftTeamName');
+
+            if (savedChallenge) {
+                document.getElementById('selectedChallengeInput').value = savedChallenge;
+            }
+            if (savedTeam) {
+                document.getElementById('teamName').value = savedTeam;
+            }
+        };
+    </script>
+
+    <!-- footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p class="mb-1">
+                © 2026 AI & Innovation Club. All Rights Reserved.
+            </p>
+
+            <small>
+                Universiti Student Community | Artificial Intelligence & Innovation
+            </small>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
